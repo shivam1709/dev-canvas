@@ -1,0 +1,60 @@
+/* Header.css */
+.header {
+    background-color: #333;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 24px;
+    color: white;
+  }
+  
+  .input{
+    margin-left: 30px;
+    flex-grow: 1; /* Allow the search bar to take up available space */
+    height: 40px;
+    color: white;
+    width: 300px;
+    border-radius: 10px;
+    background-color: gray;
+}
+::placeholder {
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+  
+  .link {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+  }
+  
+  .login-button,
+  .signup-button {
+    background-color: black;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px; /* Adjust margin as needed */
+  }
+  
