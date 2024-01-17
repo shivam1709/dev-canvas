@@ -1,0 +1,98 @@
+/* Landing.css */
+
+body {
+    background: linear-gradient(45deg, #2C3333, #595959);
+    font-family: 'Simplifica', sans-serif;
+    color: #A5C9CA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Set the minimum height of the body to the viewport height */
+    margin: 0; /* Remove default body margin */
+}
+  
+  .container {
+    text-align: center;
+  }
+  
+  .heading {
+    font-size: 124px;
+    text-align: center;
+    background: #395B64;
+    background: linear-gradient(to left, #395B64 0%, #A5C9CA 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .sub-heading {
+    font-size: 28px;
+    text-align: center;
+    padding: 0 30px; /* Adjust spacing as needed */
+  }
+  
+  .login-button,
+  .signup-button {
+    background-color: #395B64;
+    color: #A5C9CA;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+    margin: 10px; /* Adjust spacing as needed */
+  }
+  
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .description p {
+    font-size: 28px;
+    text-align: center;
+    padding: 0 30px;  /* Ensures the animation happens in a block */
+  }
+  
+ 
+  /* Add animation styles as per your preference */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .sub-heading,
+  .heading,
+  p,
+  .login-button,
+  .signup-button {
+    animation: fadeInUp 1s ease-in-out; /* Apply the animation to the elements */
+  }
+  
+  /* Media Queries for responsiveness */
+  @media screen and (max-width: 768px) {
+    .container {
+      margin-bottom: 50px; /* Adjust spacing for smaller screens */
+    }
+  
+    .heading {
+      font-size: 48px;
+    }
+  
+    .sub-heading {
+      font-size: 18px;
+    }
+  
+    .login-button,
+    .signup-button {
+      padding: 12px 24px;
+      font-size: 16px;
+    }
+  }
+  

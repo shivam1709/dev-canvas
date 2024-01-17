@@ -1,10 +1,13 @@
 /* Header.css */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
 .header {
     background-color: #333;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Open Sans', sans-serif;
   }
   
   .nav {
@@ -21,8 +24,10 @@
   }
   
   .logo {
-    font-size: 24px;
+    font-size: 36px;
     color: white;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
   .input{
