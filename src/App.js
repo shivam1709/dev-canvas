@@ -1,21 +1,26 @@
-import React from 'react';
-import Home from './pages/Home';
-import Blog from './pages/Blog';
-import Portfolio from './pages/Portfolio';
+import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Landing from './pages/Landing';
+
+const Home = lazy(() => import('./pages/Home'));
+const Blog = lazy(() => import('./pages/Blog'));
+const Portfolio = lazy(() => import('./pages/Portfolio'));
+const Register = lazy(() => import('./pages/Register'));
+const Landing = lazy(() => import('./pages/Landing'));
 
 function App() {
   return (
     <Router>
-      <div>
-        <Landing/>
-        <Routes>
-          <Route path="/" exact component={Home} />
-          <Route path="/blog" component={Blog} />
-          <Route path="/portfolio" component={Portfolio} />
-        </Routes>
-      </div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <div>
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/register" element={<Register />} />
+          </Routes>
+        </div>
+      </Suspense>
     </Router>
   );
 }

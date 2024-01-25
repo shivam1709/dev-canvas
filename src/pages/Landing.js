@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './Landing.css'; // Import your external CSS file
+import './Landing.css'; 
+import { useNavigate } from 'react-router-dom';
 
 function Landing() {
   const [typedText, setTypedText] = useState('');
@@ -24,6 +25,11 @@ function Landing() {
     return () => clearInterval(typingInterval);
   }, [descriptionText]);
 
+  const history = useNavigate();
+  const handleRegisterClick = () => {
+    history("/register"); // Replace '/register' with the actual route of your Register component
+  };
+
   return (
     <div className='container'>
       <div className="sub-heading">
@@ -44,7 +50,7 @@ function Landing() {
       <div className="buttons">
         <div className="buttons-child">
           <button className="login-button">Login</button>
-          <button className="signup-button">Signup</button>
+          <button className="signup-button" onClick={handleRegisterClick}>Register</button>
         </div>
       </div>
     </div>
